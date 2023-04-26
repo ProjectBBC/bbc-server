@@ -1,10 +1,10 @@
-import db from "@db/db";
-import api from "@api/api";
-import envConfig from "@config/env-config";
+import discord from "@discord/discord";
 
 const start = async () => {
-  await db.connect();
-  await api.listen(envConfig.LISTEN_PORT);
+  // await db.connect();
+  // await api.listen(envConfig.LISTEN_PORT);
+
+  await discord.init();
 };
 
 start();

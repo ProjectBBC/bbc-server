@@ -10,6 +10,7 @@ const envConfig = {
   MONGO_DB: String(process.env.MONGO_DB),
   MONGO_HOST: String(process.env.MONGO_HOST),
   MONGO_PORT: Number(process.env.MONGO_PORT),
+  DISCORD_BOT_TOKEN: String(process.env.DISCORD_BOT_TOKEN),
 };
 
 export default envConfig;
