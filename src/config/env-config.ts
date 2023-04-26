@@ -1,6 +1,15 @@
+import * as process from "process";
+import "@config/import-dot-env";
+
 const envConfig = {
   environment: process.env.NODE_ENV,
-  a: 1,
+  LISTEN_PORT: Number(process.env.LISTEN_PORT),
+  MONGO_AUTH: process.env.MONGO_AUTH === "true",
+  MONGO_USERNAME: String(process.env.MONGO_USERNAME),
+  MONGO_PASSWORD: String(process.env.MONGO_PASSWORD),
+  MONGO_DB: String(process.env.MONGO_DB),
+  MONGO_HOST: String(process.env.MONGO_HOST),
+  MONGO_PORT: Number(process.env.MONGO_PORT),
 };
 
 export default envConfig;

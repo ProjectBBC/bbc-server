@@ -1,0 +1,21 @@
+version: '3'
+services:
+  node:
+    env_file: ./.env
+    restart: always
+    build: .
+    ports:
+      - ${LISTEN_PORT}:${LISTEN_PORT}
+  mongo:
+    image: mongo
+    env_file: ./.env
+    ports:
+      - ${DOCKER_EXTERNAL_MONGO_PORT}:27017
+    volumes:
+      - mongodb:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=${MONGO_USERNAME}
+      - MONGO_INITDB_ROOT_PASSWORD=${MONGO_PASSWORD}
+      - MONGO_INITDB_DATABASE=${MONGO_DB}
+volumes:
+  mongodb:
