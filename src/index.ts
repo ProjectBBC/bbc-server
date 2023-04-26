@@ -1,11 +1,10 @@
 import db from "@db/db";
+import api from "@api/api";
+import envConfig from "@config/env-config";
 
-db.connect();
+const start = async () => {
+  await db.connect();
+  await api.listen(envConfig.LISTEN_PORT);
+};
 
-// console.log(api);
-// console.log(envConfig);
-// console.log(dictionary);
-// console.log(envHelper.isEnvStaging());
-// console.log(envHelper.isEnvDevelopment());
-//
-// api.listen(envConfig.LISTEN_PORT);
+start();

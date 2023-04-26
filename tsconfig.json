@@ -31,6 +31,12 @@
       ],
       "@db/*": [
         "db/*"
+      ],
+      "@models/*": [
+        "models/*"
+      ],
+      "@discord/*": [
+        "discord/*"
       ]
     }
   },
