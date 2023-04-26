@@ -48,12 +48,12 @@
       "error",
       {
         "code": 120,
-        "tabWidth": 4
+        "tabWidth": 2
       }
     ],
     "indent": [
       "error",
-      4,
+      2,
       {
         "SwitchCase": 1,
         "ignoredNodes": [
